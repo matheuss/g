@@ -1,0 +1,26 @@
+{
+  "name": "gifs",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "micro index.js",
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheuss/gifs.git"
+  },
+  "keywords": [
+    "gif",
+    "gifs"
+  ],
+  "author": "Matheus Fernandes <npm@matheus.top> (https://matheus.top/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheuss/gifs/issues"
+  },
+  "homepage": "https://github.com/matheuss/gifs#readme",
+  "dependencies": {
+    "micro": "^6.1.0"
+  }
+}
