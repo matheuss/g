@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "micro index.js",
-    "test": "xo"
+    "test": "xo",
+    "deploy": "now && now alias"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "homepage": "https://github.com/matheuss/gifs#readme",
   "dependencies": {
     "micro": "^6.1.0"
+  },
+  "now": {
+    "alias": [
+      "g"
+    ]
   }
 }
