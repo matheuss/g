@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "alias": "g.now.sh",
+  "builds": [
+    {"src": "gifs/*.gif", "use": "@now/static"}
+  ],
+  "routes": [
+    {"src": "/(.*)", "dest": "/gifs/$1.gif"}
+  ]
+}
