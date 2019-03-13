@@ -1,6 +1,7 @@
 {
   "version": 2,
   "alias": "g.now.sh",
+  "public": true,
   "builds": [
     {"src": "gifs/*.gif", "use": "@now/static"}
   ],
