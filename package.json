@@ -1,0 +1,14 @@
+{
+  "name": "gifs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:matheuss/gifs.git",
+  "author": "Matheus Fernandes <github@matheus.top>",
+  "license": "MIT",
+  "dependencies": {
+    "gif-frames": "1.0.1"
+  },
+  "scripts": {
+    "now-build": "node build.js"
+  }
+}

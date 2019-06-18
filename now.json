@@ -3,9 +3,11 @@
   "alias": "g.now.sh",
   "public": true,
   "builds": [
-    {"src": "gifs/*.gif", "use": "@now/static"}
+    {"src": "gifs/*.gif", "use": "@now/static"},
+    {"src": "package.json", "use": "@now/static-build"}
   ],
   "routes": [
+    {"handle": "filesystem"},
     {"src": "/(.*)", "dest": "/gifs/$1.gif"}
   ]
 }
