@@ -26,7 +26,6 @@ async function main() {
     
     body += `\n<a href="${basename}"><img src="/${jpgName}"></a>`
   }
-  console.log(body)
 
   writeFileSync('dist/index.html', readFileSync('index.html', 'utf8').replace('BODY', body))
 }
