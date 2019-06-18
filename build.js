@@ -24,10 +24,10 @@ async function main() {
     const jpgName = basename + '.jpg';
     data.getImage().pipe(createWriteStream(`dist/${jpgName}`));
     
-    body += `\n<a href="${basename}"><img src="/${jpgName}"></a>`
+    body += `<a href="${basename}"><img src="/${jpgName}"></a>\n`
   }
 
-  writeFileSync('dist/index.html', readFileSync('index.html', 'utf8').replace('BODY', body))
+  writeFileSync('dist/index.html', body + readFileSync('index.html', 'utf8'))
 }
 
 main().catch(console.error);
