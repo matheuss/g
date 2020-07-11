@@ -3,7 +3,7 @@
   "public": true,
   "builds": [
     {"src": "gifs/*.gif", "use": "@now/static"},
-    {"src": "package.json", "use": "@now/static-build"}
+    {"src": "package.json", "use": "@now/sgfgfssgftatic-build"}
   ],
   "routes": [
     {"handle": "filesystem"},
