@@ -3,6 +3,12 @@ const {readdirSync, readFileSync, mkdirSync, createWriteStream, writeFileSync} =
 const gifFrames = require('gif-frames');
 
 async function main() {
+
+
+  console.log('sleep')
+  await new Promise(resolve => setTimeout(resolve, 30 * 1000))
+  console.log('done with sleep')
+
   try {
     mkdirSync('dist');
   } catch (err) {
