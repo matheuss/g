@@ -6,7 +6,7 @@ async function main() {
 
 
   console.log('sleep')
-  await new Promise(resolve => setTimeout(resolve, 60 * 1000))
+  await new Promise(resolve => setTimeout(resolve, 1 * 1000))
   console.log('done with sleep')
 
   try {
