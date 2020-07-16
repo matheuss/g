@@ -9,6 +9,9 @@ async function main() {
   await new Promise(resolve => setTimeout(resolve, 1 * 1000))
   console.log('done with sleep')
 
+
+  console.log({hi: process.env.hi})
+
   try {
     mkdirSync('dist');
   } catch (err) {
