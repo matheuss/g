@@ -14,7 +14,8 @@ async function main() {
   }
 
   const files = readdirSync('gifs');
-  let body = ''
+  let body = '<span>Source: <a href="https://github.com/matheuss/g">matheuss/g</a></span><br/>'
+
 
   for (const file of files) {
     const dataArray = await gifFrames({url: `gifs/${file}`, frames: 0});
