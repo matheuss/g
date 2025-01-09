@@ -1,12 +1,5 @@
 {
-  "version": 2,
-  "public": true,
-  "builds": [
-    {"src": "gifs/*.gif", "use": "@now/static"},
-    {"src": "package.json", "use": "@now/static-build"}
-  ],
-  "routes": [
-    {"handle": "filesystem"},
-    {"src": "/(.*)", "dest": "/gifs/$1.gif"}
+  "rewrites": [
+    { "source": "/:path*", "destination": "/:path.gif" }
   ]
 }

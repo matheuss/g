@@ -1,10 +1,11 @@
-const {readdirSync, readFileSync, mkdirSync, createWriteStream, writeFileSync} = require('fs');
+// @ts-check
+const {readdirSync, readFileSync, mkdirSync, cpSync, createWriteStream, writeFileSync} = require('fs');
 
 const gifFrames = require('gif-frames');
 
 async function main() {
   try {
-    mkdirSync('dist');
+    mkdirSync('public');
   } catch (err) {
     if (err.code !== 'EEXIST') {
       // we want to throw if anythig but "dir already exists"
@@ -12,6 +13,8 @@ async function main() {
       throw err;
     }
   }
+
+  cpSync('gifs', 'public', {recursive: true})
 
   const files = readdirSync('gifs');
   let body = '<span>Source: <a href="https://github.com/matheuss/g">matheuss/g</a></span><br/>'
@@ -23,12 +26,12 @@ async function main() {
 
     const basename = file.replace('.gif', '');
     const jpgName = basename + '.jpg';
-    data.getImage().pipe(createWriteStream(`dist/${jpgName}`));
+    data.getImage().pipe(createWriteStream(`public/${jpgName}`));
     
     body += `<a href="${basename}"><img src="/${jpgName}"></a>\n`
   }
 
-  writeFileSync('dist/index.html', body + readFileSync('index.html', 'utf8'))
+  writeFileSync('public/index.html', body + readFileSync('index.html', 'utf8'))
 }
 
 main().catch(console.error);
